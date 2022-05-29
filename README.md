@@ -5,6 +5,8 @@ This project is an attempt to help farmers by recommending them a crop which is 
 
 Reference: [Medium blog link](https://towardsdatascience.com/machine-learning-basics-with-the-k-nearest-neighbors-algorithm-6a6e71d01761#:~:text=Summary,both%20classification%20and%20regression%20problems.)
 
+Deployed Link: [Heroku](https://krishi-e.herokuapp.com/)
+
 **Motivation:** India is an agrarian country with around 48.9%* of its people depending directly or indirectly upon agriculture and still has very less farm productivity. A total of 5,650 farmers have committedsuicides during 2014, accounting for 4.3% of total suicides victims in the country. Hence, farm productivity needs to be increased so that farmers can get more pay from the same piece of land with less labour.
 
 #Table of Contents
