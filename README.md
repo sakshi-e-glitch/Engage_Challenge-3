@@ -10,15 +10,15 @@ Deployed Link: [Heroku](https://krishi-e.herokuapp.com/)
 **Motivation:** India is an agrarian country with around 48.9%* of its people depending directly or indirectly upon agriculture and still has very less farm productivity. A total of 5,650 farmers have committedsuicides during 2014, accounting for 4.3% of total suicides victims in the country. Hence, farm productivity needs to be increased so that farmers can get more pay from the same piece of land with less labour.
 
 #Table of Contents
----
-* Features of the Application
-* Data Source
-* Use of Agile Methodology
-* Challenges faced
-* Future Scope
+* [Features of the Application] (#features-of-the-application)
+* [Data Source] (#data-source)
+* [Demo] (#demo)
+* [KNN Algorithm] (#knn-algorithm) 
+* [Use of Agile Methodology] (#use-of-agile-methodology)
+* [Challenges faced] (#challenges-faced)
+* [Future Scope] (#future-scope)
 
 # Features of the Application
----
 * Responsive and is compatible with devices having smaller screens.
 * Recommendation on basis of various factors
 * A guide for crops
@@ -27,8 +27,31 @@ Deployed Link: [Heroku](https://krishi-e.herokuapp.com/)
 [(Back to top)](#table-of-contents)
 
 # Data Source
----
 [Crop Recommendation Dataset](https://www.kaggle.com/datasets/atharvaingle/crop-recommendation-dataset)
+
+[(Back to top)](#table-of-contents)
+
+# Demo
+[Demo Video](https://github.com/sakshi-e-glitch/Krishi-e/blob/master/static/styles/assets/Untitled.mp4)
+[Image](https://github.com/sakshi-e-glitch/Krishi-e/blob/master/static/styles/assets/responsive.png)
+
+[(Back to top)](#table-of-contents)
+
+# KNN Algorithm
+The KNN algorithm assumes that similar things exist in close proximity. In other words, similar things are near to each other.
+
+1. Load the data
+2. Initialize K to your chosen number of neighbors
+3. For each example in the data:
+    ⋅⋅*Calculate the distance between the query example and the current example from the data.
+    ⋅⋅*Add the distance and the index of the example to an ordered collection
+
+There are various ways of calculating distance, and one way might be preferable depending on the problem we are solving. However, the straight-line distance (also called the Euclidean distance) is a popular and familiar choice.
+
+4. Sort the ordered collection of distances and indices from smallest to largest (in ascending order) by the distances
+5. Pick the first K entries from the sorted collection
+
+for my project, I've used k=1
 
 [(Back to top)](#table-of-contents)
 
@@ -41,7 +64,6 @@ I used Trello as my primary application for designing the board for the developm
 [(Back to top)](#table-of-contents)
 
 # Challenges Faced
----
 "If you are not facing challenges while developing an application, you are not considering every possible case for a better experience of your users."
 
 During the development process I faced the following challenges:
@@ -54,7 +76,6 @@ All these challenges were less of challenges and more of lessons, lessons to hel
 [(Back to top)](#table-of-contents)
 
 # Future Scope
----
 The web application can be improved by adding the following features.
 
 1. A chatbot which can entertain queries of farmers.
