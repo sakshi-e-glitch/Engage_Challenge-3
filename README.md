@@ -11,6 +11,7 @@ Reference: [Medium blog link](https://towardsdatascience.com/machine-learning-ba
 ---
 * Features of the Application
 * Data Source
+* Use of Agile Methodology
 * Challenges faced
 * Future Scope
 
@@ -21,9 +22,21 @@ Reference: [Medium blog link](https://towardsdatascience.com/machine-learning-ba
 * A guide for crops
 * Agriculture based news
 
+[(Back to top)](#table-of-contents)
+
 # Data Source
 ---
 [Crop Recommendation Dataset](https://www.kaggle.com/datasets/atharvaingle/crop-recommendation-dataset)
+
+[(Back to top)](#table-of-contents)
+
+# Use of Agile Methodology
+The Agile methodology is a way to manage a project by breaking it up into several phases. As this wasn't a team project, I could not assign different tasks to different people and form a sprint out of it. Therefore I divided myself into five different people - one who will research, one who will design, one who will develop the frontend, one who will develop the recommendation system and finally the one who will fix bugs. 
+
+I used Trello as my primary application for designing the board for the development process of this project.
+![trello ss](https://github.com/sakshi-e-glitch/Engage_Challenge-3/blob/master/static/styles/assets/trello_final.PNG)
+
+[(Back to top)](#table-of-contents)
 
 # Challenges Faced
 ---
@@ -36,6 +49,8 @@ During the development process I faced the following challenges:
 
 All these challenges were less of challenges and more of lessons, lessons to help me have an even better development process in the future and to not give up even till the end. 
 
+[(Back to top)](#table-of-contents)
+
 # Future Scope
 ---
 The web application can be improved by adding the following features.
@@ -45,3 +60,5 @@ The web application can be improved by adding the following features.
 3. Nearest soil testing lab location
 4. User registration through Aadhar Number
 5. A disease detection model for crops
+
+[(Back to top)](#table-of-contents)
