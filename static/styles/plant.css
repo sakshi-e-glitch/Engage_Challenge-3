@@ -1,0 +1,321 @@
+.navigation{
+    position: fixed;
+    /* width: 60px; */
+    top: 60px;
+    width: 0;
+    height: 100%;
+    background: #3e0748;
+    transition: 0.5s;
+    overflow: hidden;
+    z-index: 1;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+.navigation:hover, .navigation.active{
+    width: 300px;
+}
+
+.navigation ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.navigation ul li{
+    position: relative;
+    width: 100%;
+    list-style: none;
+    padding: 3% 0;
+    color: #fff;
+}
+
+.navigation ul li:hover{
+    background: #ea1d63;
+}
+
+.navigation ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: #fff;
+}
+
+.toggle{
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* width: 60px; */
+    width: 160px;
+    height: 60px;
+    background: #330748;
+    cursor: pointer;
+}
+
+.toggle.active{
+    background: #ea1d63;
+}
+
+.toggle::before{
+    content: "My Crop List";
+    /* font-family: 'Font Awesome 5 Free'; */
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 60px;
+    text-align: center;
+    font-size: 15px;
+    color: #fff;
+}
+
+.toggle.active::before{
+    content: "Close";
+}
+
+body{
+    background-image: url(sarah-youthed-upT9R6CO-Hc-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* height: 100vh;
+    width: 100vw; */
+}
+
+h1{
+    color: aliceblue;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    text-align: center;
+    margin: 15px 0;
+}
+
+.back {
+    background: #0E2F38;
+    width: 160px;
+    margin: 0 auto;
+    padding: 10px 30px;
+    
+}
+
+.plant{
+    width: 90vw;
+    /* background: rgba(97, 94, 94, 0.644); */
+    background: rgb(9,31,37, 0.6444);
+    box-shadow: 0 8px 32px 0 rgba(13, 13, 18, 0.789);
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    color: rgba(240, 248, 255, 0.86);
+    backdrop-filter: blur( 10px );
+    -webkit-backdrop-filter: blur( 10px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    padding: 0 40px;
+}
+
+#Rice, #Maize, #Chickpea, #Rajma, #Pigeon, #Mung, #Blackgram, #Lentil, #Pomegranate, #Banana{
+    display: none;
+}
+
+/* #Rice{
+    display: block;
+    margin: 0 auto;
+} */
+
+.plant h2{
+    text-align: center;
+    /* background-color: rgba(172, 255, 47, 0.835); */
+    /* background-color: rgba(4, 99, 47, 0.835); */
+    background-color: black;
+    padding: 20px 0;
+    /* color: black; */
+    color: #fff;
+    border: 2px solid white;
+}
+
+.first, .second{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.left{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.div1{
+    /* background: rgba(22, 22, 22, 0.762); */
+    background: rgb(14,47,56);
+    padding: 15px;
+    border-radius: 10px;
+    /* width: 50%; */
+    margin: 30px 0;
+    display: inline-block;
+}
+
+.div2{
+    background: rgba(251, 248, 248, 0.956);
+    /* color: black; */
+    color: #0E2F38;
+    padding: 15px;
+    border-radius: 10px;
+    /* width: 50%; */
+    margin: 30px 0;
+    display: inline-block;
+}
+
+img{
+    width: 40%;
+}
+
+.div3{
+    background: rgb(14,47,56);
+    padding: 15px;
+    border-radius: 10px;
+    /* width: 50%; */
+    margin: 30px 10px;
+    display: inline-block;
+}
+
+.second .left{
+    width: 45%;
+    background: rgb(14,47,56);
+    padding: 15px;
+    border-radius: 10px;
+    /* width: 50%; */
+    margin: 30px 0;
+    display: inline-block;
+}
+
+.second .right{
+    background: rgba(251, 248, 248, 0.956);
+    /* color: black; */
+    color: #0E2F38;
+    padding: 15px;
+    border-radius: 10px;
+    width: 45%;
+    margin: 30px 0;
+    display: inline-block;
+}
+
+.end{
+    height: 30vh;
+    background-color: aliceblue;
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.end button {
+    padding: 15px 80px;
+    background-color: #0E2F38;
+    transition: 0.5s;
+    letter-spacing: 0.5rem;
+}
+
+.end a{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.end button:hover{
+    letter-spacing: 1.2rem;
+    font-weight: bolder;
+}
+
+
+
+
+
+
+
+/* media queries ######################################################################################### */
+
+@media (max-width: 1200px){
+    .plant {
+        padding: 0 30px;
+    }
+}
+
+@media (max-width: 1000px){
+    img{
+        width: 30%;
+        height: 400px;
+    }
+}
+@media (max-width: 900px) {
+    .plant {
+        width: 80vw;
+        padding: 0 20px;
+    }
+
+    .first {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .first .left {
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .first img {
+        width: 60%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .div1{
+        
+        width: 50%; 
+       
+    }
+    
+    .div2{
+         width: 50%; 
+       
+    }
+}    
+
+@media (max-width: 650px) {
+    .first .left , .second{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .div1{ 
+        width: 85%; 
+        margin: 15px auto;
+    }
+    
+    .div2{
+         width: 85%;    
+         margin: 15px auto;
+    }
+
+    .second .left{ 
+        width: 85%; 
+        margin: 15px auto;
+    }
+    
+    .second .right{
+         width: 85%;    
+         margin: 15px auto;
+    }
+
+}
+
+@media (max-width: 500px) {
+    p {
+       font-size: 15px; 
+    }
+
+    .first img {
+        width: 100%;
+    }
+}

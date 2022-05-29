@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@600&display=swap" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.js" ></script>
+
+
+
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/index.css') }}">
+  <!-- <link rel="stylesheet" href="index.css"> -->
+  
+  <!-- <link rel="stylesheet" href="{{ url_for('static',filename='styles/index.css') }}"> -->
+  <title>Document</title>
+</head>
+<body>
+   <div class="back">
+
+    <!-- navbar for big screens  -->
+    <nav>
+      <div class="krishi"><img src="/static/styles/assets/logo.png" alt=""></div>
+      <div class="nav-items">
+        <ul class="list">
+          <li>
+            <a href="{{ url_for('main') }}"><img src="https://img.icons8.com/ios/50/000000/home--v1.png"/></a>
+          </li>
+          <li>
+            <a href="{{ url_for('news') }}"><img src="https://img.icons8.com/ios/50/000000/news.png"/></a>          
+          </li>
+          <li>
+            <a href="{{ url_for('plants') }}"><img src="https://img.icons8.com/cotton/64/000000/user-settings.png"/></a>     
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+
+    <!-- navbar for phones -->
+    <div class="nav2">
+      <div class="krishi"><img src="/static/styles/assets/logo.png" alt=""><h3 class="icon" onclick="toggleMenu()">Navbar</h3></div>
+      <div class="nav-items">
+        <ul class="list">
+          <li>
+            <a href="{{ url_for('main') }}">HOME</a>
+          </li>
+          <li>
+            <a href="{{ url_for('news') }}">NEWS</a>          
+          </li>
+          <li>
+            <a href="{{ url_for('plants') }}">GUIDE</a>     
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <main>
+
+      <div class="text_container">
+        <h2>LET'S ENTER <br> THE NEW ERA OF</h2>
+        <h1>AGRICULTURE...</h1> 
+
+        <!-- <button> <a href="recommender.html">LET'S ENTER</a></button> -->
+        <button> <a href="{{ url_for('index') }}">LET'S ENTER</a></button>
+      
+      </div>
+      <div class="image_container">
+        <img src="/static/styles/assets/plan_hand.png" alt="">
+        <!-- <img src=".\assets\3Dillustration1.png" alt="">
+        <img src=".\assets\3Dillustration2.png" alt=""> -->
+      </div>
+    </main>
+  </div>
+
+    <div class="about">
+      <div class="left">
+      <h1 class="heading">ABOUT US</h1>
+      <h1>BRINGING GROWTH TO <br> AGRICULTURE </h1>
+      <!-- <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore incidunt corporis culpa repudiandae? Omnis ex asperiores repellendus corrupti alias voluptatum illum odio possimus veniam? Expedita, neque veritatis. Sapiente sit perspiciatis tenetur optio tempore velit eos hic ea a, debitis non dolorum voluptate similique corrupti aliquam quam veritatis fugiat nemo laborum.</p> -->
+
+      <p>India is one of the biggest producers of agricultural products and still has very less farm productivity. Productivity needs to be increased so that farmers can get
+        more pay from the same piece of land with less labour.
+        Precision agriculture provides a way to do it. Precision
+        farming , as the name implies, refers to the applying of
+        precise and proper total of comment like pee , fertilizers,
+        soil etc. at the proper time to the craw for increasing its
+        productivity and increasing its yields. <br> <br> We provide our users a recommendation algorithm, which recommends them a crop which is suitable for their soil.</p>
+      </div>
+      <div class="right">
+        <img src="/static/styles/assets/girl.jpg" alt="">
+      </div>
+    </div>
+
+    <div class="factors">
+      <h1>WHAT</h1>
+      <h1 class="heading">FACTORS</h1>
+      <h1>DO WE LOOK AT?</h1>
+
+      <div class="factors_list">
+      <div class="circle">Nitrogen</div>
+
+      <div class="circle">Phosphorus</div>
+
+      <div class="circle">Potassium</div>
+
+      <div class="circle">Temperature</div>
+
+      <div class="circle">Humidity</div>
+
+      <div class="circle">pH Level</div>
+
+      <div class="circle">Rainfall</div>
+       </div> 
+    </div>
+   
+
+
+
+    <!-- js for navbar -->
+    <script>
+      function toggleMenu(){
+        let navigation = document.querySelector('.nav2 .list');
+        let toggle = document.querySelector('.icon');
+        navigation.classList.toggle('active');
+        toggle.classList.toggle('active'); 
+    }
+    </script>
+</body>
+</html>

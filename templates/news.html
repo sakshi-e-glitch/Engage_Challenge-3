@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/news.css') }}">
+
+    <!-- <link rel="stylesheet" href="news.css"> -->
+    <title>News</title>
+</head>
+<body>
+     <!-- <?php
+            $url = 'https://newsapi.org/v2/everything?q=farming&apiKey=25b54ffb53654f8b8f417f81e403b85e';
+            $response = file_get_contents($url);
+            $NewsData = json_decode($response); 
+        ?> -->
+        <!-- navbar for big screens  -->
+    <nav>
+      <div class="krishi"><img src="/static/styles/assets/logo.png" alt=""></div>
+      <div class="nav-items">
+        <ul class="list">
+          <li>
+            <a href="{{ url_for('main') }}"><img src="https://img.icons8.com/ios/50/000000/home--v1.png"/></a>
+          </li>
+          <li>
+            <a href="news.html"><img src="https://img.icons8.com/ios/50/000000/news.png"/></a>          
+          </li>
+          <li>
+            <a href="{{ url_for('plants') }}"><img src="https://img.icons8.com/cotton/64/000000/user-settings.png"/></a>     
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+
+    <!-- navbar for phones -->
+    <div class="nav2">
+      <div class="krishi"><img src="/static/styles/logo.png" alt=""><h3 class="icon" onclick="toggleMenu()">Navbar</h3></div>
+      <div class="nav-items">
+        <ul class="list">
+          <li>
+            <a href="{{ url_for('main') }}">HOME</a>
+          </li>
+          <li>
+            <a href="{{ url_for('news') }}">NEWS</a>          
+          </li>
+          <li>
+            <a href="{{ url_for('plants') }}">GUIDE</a>     
+          </li>
+        </ul>
+      </div>
+    </div>
+
+          <main>
+              <!-- <div class="card"> -->
+     
+                    <!-- <div class="row m-3" id="newsType"></div> -->
+                    <div class="row me-2 ms-2" id="newsdetails">
+ 
+                    </div>
+           
+              <!-- </div> -->
+          </main>
+
+    <!-- js for navbar -->
+    <script>
+      function toggleMenu(){
+        let navigation = document.querySelector('.nav2 .list');
+        let toggle = document.querySelector('.icon');
+        navigation.classList.toggle('active');
+        toggle.classList.toggle('active'); 
+    }
+    </script>
+
+          <!-- <script src="news.js"></script> -->
+
+
+
+
+
+          <!-- js for entire code -->
+          <script>
+            var newsDataArr = [];
+
+// apis 
+const API_KEY = "25b54ffb53654f8b8f417f81e403b85e";
+const HEADLINES_NEWS = "https://newsapi.org/v2/everything?q=farming||agriculture&apiKey=";
+
+const fetchHeadlines = async () => {
+    const response = await fetch(HEADLINES_NEWS+API_KEY);
+    newsDataArr = [];
+    if(response.status >=200 && response.status < 300) {
+        const myJson = await response.json();
+        newsDataArr = myJson.articles;
+    } else {
+        // handle errors
+        console.log(response.status, response.statusText);
+        newsdetails.innerHTML = "<h5>No data found.</h5>"
+        return;
+    }
+
+    displayNews();
+}
+
+window.onload = function() {
+    // newsType.innerHTML="<h4>Headlines</h4>";
+    fetchHeadlines();
+};
+
+function displayNews() {
+
+    newsdetails.innerHTML = "";
+
+    // if(newsDataArr.length == 0) {
+    //     newsdetails.innerHTML = "<h5>No data found.</h5>"
+    //     return;
+    // }
+
+    newsDataArr.forEach(news => {
+
+        var date = news.publishedAt.split("T");
+        
+        var col = document.createElement('div');
+        col.className="col-sm-12 col-md-4 col-lg-3 p-2 card";
+
+        var card = document.createElement('div');
+        card.className = "p-2";
+
+        var image = document.createElement('img');
+        image.setAttribute("height","matchparent");
+        image.setAttribute("width","100%");
+        image.src=news.urlToImage;
+        image.alt="No photo available"
+
+        var cardBody = document.createElement('div');
+        
+        var newsHeading = document.createElement('h3');
+        // newsHeading.className = "card-title";
+        newsHeading.className = "title";
+        newsHeading.innerHTML = news.title;
+
+        var dateHeading = document.createElement('h6');
+        // dateHeading.className = "text-primary";
+        dateHeading.className = "date";
+        dateHeading.innerHTML = date[0];
+
+        var discription = document.createElement('p');
+        // discription.className="text-muted";
+        discription.className="desc";
+        discription.innerHTML = news.description;
+
+        var link = document.createElement('a');
+        link.className="btn btn-dark";
+        link.setAttribute("target", "_blank");
+        link.href = news.url;
+        link.innerHTML="Read more";
+
+        cardBody.appendChild(newsHeading);
+        cardBody.appendChild(dateHeading);
+        cardBody.appendChild(discription);
+        cardBody.appendChild(link);
+
+        card.appendChild(image);
+        card.appendChild(cardBody);
+
+        col.appendChild(card);
+
+        newsdetails.appendChild(col);
+    });
+
+}
+          </script>
+
+</body>
+
+</html>

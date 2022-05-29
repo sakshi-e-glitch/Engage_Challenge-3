@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300&display=swap" rel="stylesheet">
+
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/recommender.css') }}">
+    <!-- <link rel="stylesheet" href="xyz.css"> -->
+    <title>Document</title>
+
+</head>
+<body>
+    
+
+    <div class="container">
+        <div class="left">
+        <h1>Which crop best suits </h1>
+        <h1>your farm ?</h1>
+
+        <p>Agricultural Universities, Research Institutes, Krishi Vigyan Kendras have been generating ample technologies to improve the productivity and profitability of the farmers. However, a knowledge gap is prevailing among farmers and those who have access to knowledge harvest better profits.</p>
+
+        <!-- <p>Among the list of numerous factors, the important ones are:</p>
+        <ul>
+            <li>Soil conditions: 
+                <br>
+                Is the crop/cropping system suitable for local soil type, pH and soil fertility?
+            </li>
+            <li>Climatic factors:
+                <br>
+                Is the crop/cropping system suitable for local weather parameters such as temperature, rainfall, sunshine hours, relative humidity, wind velocity, wind direction, seasons and agro-ecological situations?
+            </li>
+        </ul> -->
+        </div>
+
+        <div class="right">
+            <form method="post" action="{{ url_for('crop_prediction') }}" > 
+            <div class="test">
+            <!-- <form action="{{ url_for('crop_prediction') }}" method="post" >  -->
+                <label for="N">Nitrogen*: </label>
+                <input type="number" name="n" id="" required>
+                <br>
+
+                <label for="Ph">Phosphorus*: </label>
+                <input type="number" name="ph" id="" required>
+                <br>
+
+                <label for="K">Potassium*: </label>
+                <input type="number" name="k" id="" required>
+                <br>
+
+                <label for="T">Temperature*: </label>
+                <input type="number" name="t" id="" required>
+                <br>
+
+                <label for="H">Humidity*: </label>
+                <input type="number" name="h" id="" required>
+                <br>
+
+                <label for="pH">pH Level*: </label>
+                <input type="number" name="ph_level" id="" required>
+                <br>
+
+                <label for="rainfall">Rainfall*: </label>
+                <input type="number" name="rainfall" id="" required>
+            <!-- </form>  -->
+            
+            <!-- <p>The crop suggested is {{crop_name}}</p> -->
+            </div>
+            <!-- <input type="submit" value=""> -->
+
+            <!-- HTML !-->
+            <button type="submit" class="button-86" >Recommend...</button>
+            </form> 
+        </div>        
+    </div>
+</body>
+</html>
