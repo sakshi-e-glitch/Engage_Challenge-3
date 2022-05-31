@@ -5,18 +5,21 @@ This project is an attempt to help farmers by recommending them a crop which is 
 
 Reference: [Medium blog link](https://towardsdatascience.com/machine-learning-basics-with-the-k-nearest-neighbors-algorithm-6a6e71d01761#:~:text=Summary,both%20classification%20and%20regression%20problems.)
 
-Deployed Link: [Heroku](https://krishi-e.herokuapp.com/)
+Deployed Link: [Heroku](https://krishi-e.herokuapp.com/) (the deployed website has issue with the news section, I would recommend to clone the repo in order to have a better experience) 
 
 **Motivation:** India is an agrarian country with around 48.9%* of its people depending directly or indirectly upon agriculture and still has very less farm productivity. A total of 5,650 farmers have committedsuicides during 2014, accounting for 4.3% of total suicides victims in the country. Hence, farm productivity needs to be increased so that farmers can get more pay from the same piece of land with less labour.
+[Link to a news article](https://www.downtoearth.org.in/news/agriculture/every-day-28-people-dependent-on-farming-die-by-suicide-in-india-73194)
 
 # Table of Contents
 * [Features of the Application](#features-of-the-application)
 * [Data Source](#data-source)
+* [Install and run locally](#install-and-run-locally)
 * [Demo](#demo)
 * [KNN Algorithm](#knn-algorithm) 
 * [Use of Agile Methodology](#use-of-agile-methodology)
 * [Challenges faced](#challenges-faced)
 * [Future Scope](#future-scope)
+* [Support and Contact](#support-and-contact)
 
 # Features of the Application
 * Responsive and is compatible with devices having smaller screens.
@@ -26,13 +29,37 @@ Deployed Link: [Heroku](https://krishi-e.herokuapp.com/)
 
 [(Back to top)](#table-of-contents)
 
+# Install and run locally
+To use this project, follow the steps below:
+
+1. You should have python installed in you computer. 
+
+2. Initialise git on your terminal.
+
+```bash
+git init
+```
+3. Clone this repository.
+
+```bash
+git clone https://github.com/sakshi-e-glitch/Krishi-e.git
+``` 
+4. Open the directory created via a code editor, it is recommended you use Visual Studio Code. Futher, open app.py .
+
+5. Run the following command to install required packages
+
+```bash
+pip install -r requirements.txt
+```
+6. Once all the required packages are installed. Again run app.py. This time it will give you a link to run on local host. :)
+
 # Data Source
 [Crop Recommendation Dataset](https://www.kaggle.com/datasets/atharvaingle/crop-recommendation-dataset)
 
 [(Back to top)](#table-of-contents)
 
 # Demo
-![Demo Video](https://github.com/sakshi-e-glitch/Krishi-e/blob/master/static/styles/assets/Untitled.mp4)
+[Demo Video](https://youtu.be/oB1C0OiZ-qA)
 ![Image](https://github.com/sakshi-e-glitch/Krishi-e/blob/master/static/styles/assets/responsive.png)
 
 [(Back to top)](#table-of-contents)
@@ -83,5 +110,11 @@ The web application can be improved by adding the following features.
 3. Nearest soil testing lab location
 4. User registration through Aadhar Number
 5. A disease detection model for crops
+
+[(Back to top)](#table-of-contents)
+
+# Support and Contact 
+
+Email To: sakshi.pandey1510@gmail.com
 
 [(Back to top)](#table-of-contents)
