@@ -59,7 +59,7 @@ pip install -r requirements.txt
 [(Back to top)](#table-of-contents)
 
 # Demo
-[Demo Video](https://youtu.be/oB1C0OiZ-qA)
+
 ![Image](https://github.com/sakshi-e-glitch/Krishi-e/blob/master/static/styles/assets/responsive.png)
 
 [(Back to top)](#table-of-contents)
