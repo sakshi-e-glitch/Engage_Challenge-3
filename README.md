@@ -86,7 +86,7 @@ for my project, I've used k=1
 The Agile methodology is a way to manage a project by breaking it up into several phases. As this wasn't a team project, I could not assign different tasks to different people and form a sprint out of it. Therefore I divided myself into five different people - one who will research, one who will design, one who will develop the frontend, one who will develop the recommendation system and finally the one who will fix bugs. 
 
 I used Trello as my primary application for designing the board for the development process of this project.
-![trello ss](https://github.com/sakshi-e-glitch/Engage_Challenge-3/blob/master/static/styles/assets/trello_final.PNG)
+![trello ss](https://github.com/sakshi-e-glitch/Krishi-e/blob/master/trello.PNG)
 
 [(Back to top)](#table-of-contents)
 
